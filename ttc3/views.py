@@ -12,8 +12,8 @@ class Persona(object):
 def aloha(request): # Primera vista
 
     p1 = Persona("Terricola Daily", "Taboada")
-    
-    temas_del_curso = ["plantillas", "modelos", "formularios", "vistas", "despliegue"]
+    # "plantillas", "modelos", "formularios", "vistas", "despliegue"
+    temas_del_curso = []
 
     doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/plantilla1.html")
     plt = Template(doc_externo.read())
