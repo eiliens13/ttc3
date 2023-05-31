@@ -3,19 +3,27 @@ import datetime
 from django.template import Template, Context
 
 
+class Persona(object):
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
+
 def aloha(request): # Primera vista
 
+    p1 = Persona("Terricola Daily", "Taboada")
+    
+    temas_del_curso = ["plantillas", "modelos", "formularios", "vistas", "despliegue"]
+
     doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/plantilla1.html")
-    nombre = "Daily"
-    apellido = "Taboada"
-    tiempo = datetime.datetime.now()
     plt = Template(doc_externo.read())
     doc_externo.close()
     ctx = Context(
         {
-            "nombre_persona":nombre,
-            "apellido_persona":apellido,
-            "fecha_actual":tiempo,
+            "nombre_persona":p1.nombre,
+            "apellido_persona":p1.apellido, 
+            "tiempo":datetime.datetime.now(),
+            "temas":temas_del_curso,
         }
         )
     documento = plt.render(ctx)
@@ -25,17 +33,17 @@ def despedida(request):
     return HttpResponse("Hasta luego bees")
 
 
-def dame_fecha(request):
-    fecha_actual = datetime.datetime.now()
-    documento = """<html>
-    <body>
-    <h2>
-    Fecha y hora actuales %s
-    </h1>
-    </body>
-    </html>""" %fecha_actual
+# def dame_fecha(request):
+#     fecha_actual = datetime.datetime.now()
+#     documento = """<html>
+#     <body>
+#     <h2>
+#     Fecha y hora actuales %s
+#     </h1>
+#     </body>
+#     </html>""" %fecha_actual
 
-    return HttpResponse(documento)
+#     return HttpResponse(documento)
 
 def calcula_edad(request, edad, agno):
 

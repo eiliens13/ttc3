@@ -5,7 +5,15 @@
         Nuestra primera plantilla    
     </h1>
     <p>el nombre del autor de esta web es: {{nombre_persona}} {{apellido_persona}}</p>
-    <p>Me encuentro haciendo estas plantillas con su contexto: {{fecha_actual.day}} / {{fecha_actual.month}} / {{fecha_actual.year}}</p>
+    <p>estoy actualmente trabajando en esta plantilla pasando el contexto como variable el: {{tiempo.day}} / {{tiempo.month}} / {{tiempo.year}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+            {% for elTema in temas %}
+                <li>{{elTema}}</li>
+            {% endfor %}
+        </ul>
+    </p>
 </body>
 
 </html>

@@ -20,9 +20,9 @@ from ttc3.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("aloha/", aloha),
+    path("aloha/", aloha, name="aloha"),
     path("despedida/", despedida),
-    path("fecha/", dame_fecha),
+    # path("fecha/", dame_fecha),
     path("edades/<int:edad>/<int:agno>", calcula_edad),
     path("home/", home),
     path("layout/", layout),
