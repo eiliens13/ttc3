@@ -4,6 +4,13 @@
   <h1>
     Nuestra primera plantilla
   </h1>
+
+  {% if nombre_persona == " Terricola Daily" %}
+    <p>El titular de esta web en efecto es ella.</p>
+  {% else %}
+    <p>El titular de la web no es esa persona</p>
+  {% endif %}
+
   <p>el nombre del autor de esta web es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
   <p>estoy actualmente trabajando en esta plantilla pasando el contexto como variable el: {{tiempo.day}} /
     {{tiempo.month}} / {{tiempo.year}}</p>

@@ -11,7 +11,7 @@ class Persona(object):
 
 def aloha(request): # Primera vista
 
-    p1 = Persona("Terricola Daily", "Taboada")
+    p1 = Persona(" Terricola Daily", "Taboada")
     # "plantillas", "modelos", "formularios", "vistas", "despliegue"
     temas_del_curso = []
 
