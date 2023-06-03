@@ -50,11 +50,13 @@ def calcula_edad(request, edad, agno):
 #=======================================================
 # Plantillas de la version 1.2 de Tawa Taxi ;)
 def home (request):
+    fecha_actual = datetime.datetime.now()
+    return render(request, "home.html", {"dame_fecha":fecha_actual})
 
-    return render(request, "home.html", {})
 
 def layout (request):
     return render(request, "layout.html", {})
+
 
 def about (request):
     return render(request, "about.html", {})
