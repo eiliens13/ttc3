@@ -26,17 +26,17 @@ def despedida(request):
     return HttpResponse("Hasta luego bees")
 
 
-# def dame_fecha(request):
-#     fecha_actual = datetime.datetime.now()
-#     documento = """<html>
-#     <body>
-#     <h2>
-#     Fecha y hora actuales %s
-#     </h1>
-#     </body>
-#     </html>""" %fecha_actual
+def dame_fecha(request):
+    fecha_actual = datetime.datetime.now()
+    documento = """<html>
+    <body>
+    <h2>
+    Fecha y hora actuales %s
+    </h1>
+    </body>
+    </html>""" %fecha_actual
 
-#     return HttpResponse(documento)
+    return HttpResponse(documento)
 
 def calcula_edad(request, edad, agno):
 
@@ -50,16 +50,11 @@ def calcula_edad(request, edad, agno):
 #=======================================================
 # Plantillas de la version 1.2 de Tawa Taxi ;)
 def home (request):
-    doc_externo = get_template('home.html')
-    documento = doc_externo.render()
-    return HttpResponse(documento)
+
+    return render(request, "home.html", {})
 
 def layout (request):
-    doc_externo = get_template('layout.html')
-    documento = doc_externo.render()
-    return HttpResponse(documento)
+    return render(request, "layout.html", {})
 
 def about (request):
-    doc_externo = get_template('about.html')
-    documento = doc_externo.render()
-    return HttpResponse(documento)
+    return render(request, "about.html", {})
