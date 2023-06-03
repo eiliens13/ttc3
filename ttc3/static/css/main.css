@@ -1,0 +1,81 @@
+/* Barra de Navegacion */
+
+.navbar {
+  padding: 1rem;
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+.nav-link {
+  color: antiquewhite;
+}
+
+.nav-link:hover {
+  color: #24f137;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Generales */
+
+body, .navbar{
+  background: #DCE35B;
+  background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #45B649, #DCE35B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.seccion-verde {
+  background-color: rgb(224, 248, 9);
+  color: black;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.seccion-texto {
+  font-size: 1.2rem;
+}
+
+/* Seccion Hero */
+
+.hero {
+  min-height: 450px;
+  text-align: center;
+}
+
+/* Seccion Circuitos */
+.boton-detalles {
+  padding: 7px;
+  margin: 8px;
+  color: white;
+  background-color: black;
+  border-color: gray;
+  display: flex;
+  justify-items: center;
+  max-width: 300px;
+}
+
+.boton-detalles:hover {
+  color: black;
+  background-color: greenyellow;
+  border-color: black;
+}

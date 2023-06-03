@@ -5,11 +5,18 @@
     Nuestra primera plantilla
   </h1>
 
+{# Estructuras de control de flujo, condicionales #}
+
   {% if nombre_persona == " Terricola Daily" %}
     <p>El titular de esta web en efecto es ella.</p>
   {% else %}
     <p>El titular de la web no es esa persona</p>
   {% endif %}
+
+{% comment %}
+Esto es un comentario de varias lineas
+Yalaaaaa
+{% endcomment %}
 
   <p>el nombre del autor de esta web es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
   <p>estoy actualmente trabajando en esta plantilla pasando el contexto como variable el: {{tiempo.day}} /

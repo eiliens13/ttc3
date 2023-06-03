@@ -24,7 +24,7 @@ urlpatterns = [
     path("despedida/", despedida),
     # path("fecha/", dame_fecha),
     path("edades/<int:edad>/<int:agno>", calcula_edad),
-    path("home/", home),
-    path("layout/", layout),
-    path("about/", about),
+    path("home/", home, name="home"),
+    path("layout/", layout, name="layout"),
+    path("about/", about, name="about"),
 ]

@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 import datetime
 from django.template import Template, Context
+from django.template.loader import get_template 
+from django.shortcuts import render
 
 
 class Persona(object):
@@ -12,22 +14,13 @@ class Persona(object):
 def aloha(request): # Primera vista
 
     p1 = Persona(" Terricola Daily", "Taboada")
-    # "plantillas", "modelos", "formularios", "vistas", "despliegue"
-    temas_del_curso = []
-
-    doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/plantilla1.html")
-    plt = Template(doc_externo.read())
-    doc_externo.close()
-    ctx = Context(
-        {
+    temas_del_curso = ["plantillas", "modelos", "formularios", "vistas", "despliegue"]
+    return render(request, "plantilla1.html", {
             "nombre_persona":p1.nombre,
             "apellido_persona":p1.apellido, 
             "tiempo":datetime.datetime.now(),
             "temas":temas_del_curso,
-        }
-        )
-    documento = plt.render(ctx)
-    return HttpResponse(documento)
+        })
 
 def despedida(request):
     return HttpResponse("Hasta luego bees")
@@ -57,34 +50,16 @@ def calcula_edad(request, edad, agno):
 #=======================================================
 # Plantillas de la version 1.2 de Tawa Taxi ;)
 def home (request):
-    doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/home.html")
-    
-    plt = Template(doc_externo.read())
-    
-    doc_externo.close()
-    
-    ctx = Context()
-    documento = plt.render(ctx)
+    doc_externo = get_template('home.html')
+    documento = doc_externo.render()
     return HttpResponse(documento)
 
 def layout (request):
-    doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/layout.html")
-    
-    plt = Template(doc_externo.read())
-    
-    doc_externo.close()
-    
-    ctx = Context()
-    documento = plt.render(ctx)
+    doc_externo = get_template('layout.html')
+    documento = doc_externo.render()
     return HttpResponse(documento)
 
 def about (request):
-    doc_externo = open("C:/Users/Putizima Ama/Desktop/TawaTaxiV1.3/ttc3/ttc3/templates/about.html")
-    
-    plt = Template(doc_externo.read())
-    
-    doc_externo.close()
-    
-    ctx = Context()
-    documento = plt.render(ctx)
+    doc_externo = get_template('about.html')
+    documento = doc_externo.render()
     return HttpResponse(documento)
