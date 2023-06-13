@@ -78,7 +78,7 @@ WSGI_APPLICATION = "ttc3.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": BASE_DIR / "TawaTaxi",
+        "NAME": "tawataxi",
         "USER": "postgres",
         "PASSWORD": "superUserb4e+",
         "HOST": "127.0.0.1",
