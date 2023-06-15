@@ -10,7 +10,8 @@ class Clientes(models.Model):
 
 class Circuitos(models.Model):
     nombre = models.CharField(max_length=30)
-    destinos_turisticos = models.CharField(max_length=20)
+    destinos_turisticos = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=1000)
     precio = models.IntegerField()
 
 class Pedidos(models.Model):
