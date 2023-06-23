@@ -16,7 +16,8 @@ class Circuitos(models.Model):
     
 
     def __str__(self):
-        return "El nombre es %s, el destino turistico es %s, el precio es %s, la descripcion es %s" %(self.nombre, self.destinos_turisticos, self.descripcion, self.precio)
+        return "El nombre es %s, el destino turistico es %s, la descripcion es %s, el precio es %s" %(self.nombre, self.destinos_turisticos, self.descripcion, self.precio)
+
 
 class Pedidos(models.Model):
     numero = models.IntegerField()
