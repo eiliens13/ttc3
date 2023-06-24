@@ -4,9 +4,13 @@ from django.db import models
 
 class Viajero(models.Model):
     nombre = models.CharField(max_length=30)
-    direccion = models.CharField(max_length=50)
+    direccion = models.CharField(max_length=50, verbose_name="Dirección")
     email = models.EmailField()
     phone = models.CharField(max_length=8)
+
+    def __str__(self):
+        return self.nombre
+
 
 class Circuito(models.Model):
     lugar = models.CharField(max_length=30)
