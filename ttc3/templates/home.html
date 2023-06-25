@@ -12,15 +12,16 @@
       Con nosotros podrás hacer tus viajes de ensueño, elige con libertad tu destino.
     </p>
     <div class="d-inline-flex gap-2 mb-5">
-      <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+      <a href="{% url 'about' %}">
+        <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
         Circuitos
-        <svg class="bi ms-2" width="15" height="14">
-          <use xlink:href="#arrow-right-short"></use>
-        </svg>
-      </button>
-      <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-        Automóviles
-      </button>
+        </button>
+      </a>
+      <a href="#">
+        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+          Automóviles
+        </button>
+      </a>
     </div>
   </div>
 </div>
