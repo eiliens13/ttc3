@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ttc3.views import *
+from gestionPedidos import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path("home/", home, name="home"),
     path("layout/", layout, name="layout"),
     path("about/", about, name="about"),
+    path("busqueda_circuitos/", views.busqueda_circuitos),
 ]

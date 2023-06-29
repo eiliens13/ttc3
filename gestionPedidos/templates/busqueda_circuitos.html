@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %} Busqueda de Circuitos  ~ TawaTaxi Cuba {% endblock %}
+
+{% block content %}
+
+<form action="/buscar/" method="get">
+    <input type="text" name="cir">
+    <input type="submit" value="Buscar">
+
+{% endblock %}

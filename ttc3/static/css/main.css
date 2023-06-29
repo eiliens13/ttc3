@@ -8,7 +8,7 @@
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #434343, #000000);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+
 }
 
 .nav-link {
@@ -26,7 +26,8 @@
 
 /* Generales */
 
-body, .navbar{
+body,
+.navbar {
   background: #DCE35B;
   background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -64,67 +65,34 @@ body, .navbar{
 
 /* Seccion Circuitos */
 .boton-detalles {
-  padding: 7px;
-  margin: 8px;
-  color: white;
+  --hover-shadows: 16px 16px 33px #121212,
+                    -16px -16px 33px #303030, -13px -13px 10px #29d972;
+  --accent: greenyellow;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 1em 2em;
+  color: whitesmoke;
   background-color: black;
-  border-color: gray;
-  display: flex;
-  justify-items: center;
+  border: none;
+  border-radius: 1.1em;
   max-width: 300px;
+  transition: box-shadow ease-in-out 0.3s,
+      background-color ease-in-out 0.1s,
+      letter-spacing ease-in-out 0.1s,
+      transform ease-in-out 0.1s, color 0.1s ease-in-out;
+    box-shadow: 13px 13px 10px #1c1c1c,
+      -13px -13px 10px #262626, -13px -13px 10px #29d972;
 }
 
 .boton-detalles:hover {
-  color: black;
-  background-color: greenyellow;
+  --box-shadow-color: goldenrod;
   border-color: black;
+  box-shadow: var(--hover-shadows);
 }
 
-.button1  {
-  padding: 0.1em 0.25em;
-  width: 13em;
-  height: 4.2em;
-  background-color: #212121;
-  border: 0.08em solid #fff;
-  border-radius: 0.3em;
-  font-size: 12px;
+.boton-detalles:active {
+  box-shadow: var(--hover-shadows),
+    var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
 }
-
-button span {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: 0.4em;
-  width: 8.25em;
-  height: 2.5em;
-  background-color: #212121;
-  border-radius: 0.2em;
-  font-size: 1.5em;
-  color: #fff;
-  border: 0.08em solid #fff;
-  -webkit-box-shadow: 0 0.4em 0.1em 0.019em #fff;
-          box-shadow: 0 0.4em 0.1em 0.019em #fff;
-}
-
-button span:hover {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: translate(0, 0.4em);
-      -ms-transform: translate(0, 0.4em);
-          transform: translate(0, 0.4em);
-  -webkit-box-shadow: 0 0 0 0 #fff;
-          box-shadow: 0 0 0 0 #fff;
-}
-
-button span:not(hover) {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
