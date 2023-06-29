@@ -4,6 +4,21 @@
 
 {% block content %}
 
+<p> Estás buscando: <strong>{{query}}</strong> </p>
 
+{%if circuitos %}
+    <p>Circuitos encontrados: {{circuitos|length}} circuitos</p>
+
+    <ul>
+        {% for circuito in circuitos %}
+            <li>
+                {{circuito.lugar}} &nbsp; {{circuito.destinos_turisticos}} &nbsp; {{circuito.descripcion}} &nbsp; {{circuito.precio}}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Circuito no encontrado</p>
+
+{% endif %}
 
 {% endblock %}
