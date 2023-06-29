@@ -20,3 +20,7 @@ def buscar(request):
     else:
         mensaje = "Debes introducir un destino para mostrarte nuestras ofertas 😉 "
     return HttpResponse(mensaje)
+
+
+def contacto(request):
+    return render(request, "contacto.html")  
