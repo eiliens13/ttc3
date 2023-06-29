@@ -30,4 +30,5 @@ urlpatterns = [
     path("about/", about, name="about"),
     path("busqueda_circuitos/", views.busqueda_circuitos),
     path("buscar/", views.buscar),
+    path("resultados_circuitos/", views.buscar),
 ]
