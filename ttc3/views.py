@@ -61,4 +61,7 @@ def layout (request):
 def about (request):
     return render(request, "about.html", {})
 
+def circuitos (request):
+    return render(request, "circuitos/new_cardsgroup.html", {})
+
 
