@@ -1,39 +1,35 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Plantilla</title>
+</head>
 <body>
-  <h1>
-    Nuestra primera plantilla
-  </h1>
-
-{# Estructuras de control de flujo, condicionales #}
-
-  {% if nombre_persona == " Terricola Daily" %}
-    <p>El titular de esta web en efecto es ella.</p>
-  {% else %}
-    <p>El titular de la web no es esa persona</p>
-  {% endif %}
-
-{% comment %}
-Esto es un comentario de varias lineas
-Yalaaaaa
-{% endcomment %}
-
-  <p>el nombre del autor de esta web es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
-  <p>estoy actualmente trabajando en esta plantilla pasando el contexto como variable el: {{tiempo.day}} /
-    {{tiempo.month}} / {{tiempo.year}}</p>
-  <p><strong>Temas del curso:</strong></p>
-  <p>
-  <ul>
-    {% if temas %}
-      {% for elTema in temas %}
-      <li>{{elTema}}</li>
-      {% endfor %}
-
-    {% else %}  
-      <p>No hay elementos que mostrar</p>
+    <h1>Nuestra primera plantilla</h1>
+    <!-- Estructuras de control de flujo, condicionales -->
+    {% if nombre_persona == "Terricola Daily" %}
+        <p>El titular de esta web en efecto es ella.</p>
+    {% else %}
+        <p>El titular de la web no es esa persona.</p>
     {% endif %}
-  </ul>
-  </p>
+    {% comment %}
+        Esto es un comentario de varias lineas.
+        Yalaaaaa
+    {% endcomment %}
+    <p>El nombre del autor de esta web es: {{ nombre_persona.upper }} {{ apellido_persona.upper }}</p>
+    <p>Estoy actualmente trabajando en esta plantilla, pasando el contexto como variable el: {{ tiempo.day }}/{{ tiempo.month }}/{{ tiempo.year }}</p>
+    <p><strong>Temas del curso:</strong></p>
+    {% if temas %}
+        <ul>
+            {% for elTema in temas %}
+                <li>{{ elTema }}</li>
+            {% empty %}
+                <li>No hay temas disponibles.</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay elementos que mostrar.</p>
+    {% endif %}
 </body>
-
 </html>
