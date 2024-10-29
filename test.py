@@ -24,7 +24,7 @@ class Perro(Animal):
         self.dueño = dueño
 
     def mostrar(self):
-        print(f"El duenno de este {self.especie} es {self.dueño}")
+        print(f"El dueño de este {self.especie} es {self.dueño}")
 
     def describeme(self):
         return super().describeme()

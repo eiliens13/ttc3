@@ -25,7 +25,7 @@ urlpatterns = [
     path("despedida/", despedida),
     path("fecha/", dame_fecha, name="dame_fecha"),
     path("edades/<int:edad>/<int:agno>", calcula_edad),
-    path("home/", home, name="home"),
+    path("", home, name="home"), # poner las comillas vacias indica que es la view por default
     path("layout/", layout, name="layout"),
     path("about/", about, name="about"),
     path("busqueda_circuitos/", views.busqueda_circuitos),

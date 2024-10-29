@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "ttc3"
+		}
+	],
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.python"
+		},
+		"python.formatting.provider": "none"
+	}
+}

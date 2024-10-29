@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Seccion Hero -->
+<div class="hero jumbotron container my-5">
+  <div class="p-2 text-center bg-body-tertiary rounded-3">
+    <img src="../static/imgs/logo.png" width="440" height="250" alt="Logo TTC">
+    <h1 class="text-body-emphasis">De Pinar a Maisí!</h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+      Con nosotros podrás hacer tus viajes de ensueño, elige con libertad tu destino.
+    </p>
+    <div class="d-inline-flex gap-2 mb-5">
+      <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+        Circuitos
+        <svg class="bi ms-2" width="15" height="14">
+          <use xlink:href="#arrow-right-short"></use>
+        </svg>
+      </button>
+      <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+        Automóviles
+      </button>
+    </div>
+  </div>
+</div>
+  <!-- Cards Groups from https://getbootstrap.com/docs/5.3/components/card/#card-groups -->
+  <div class="container">
+    <div class="card-group">
+      <div class="card">
+        <img src="../static/imgs/valle.jpg" class="card-img-top" alt="Circuito de Viñales">
+        <div class="card-body">
+          <h5 class="card-title">Viñales</h5>
+          <p class="card-text">El valle de Viñales es un valle en la provincia de Pinar del Río,
+            en el sector occidental de Cuba. Se encuentra en la Sierra de los Órganos, en la parte
+            más occidental de la Cordillera de Guaniguanico.</p>
+          <p class="card-text"><small class="text-body-secondary">💰 aporximado: 200$</small></p>
+          <a href="#" class="boton-detalles btn btn-primary">Más Detalles</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://media.traveler.es/photos/61377896030de94d067fdadc/16:9/w_2560%2Cc_limit/205920.jpg"
+          class="card-img-top" alt="Circuito de La Habana">
+        <div class="card-body">
+          <h5 class="card-title">Mi Habana</h5>
+          <p class="card-text">La Habana es la capital de Cuba. La arquitectura colonial española en
+            el centro de la Habana Vieja del siglo XVI incluye el Castillo de la Fuerza Real, un fuerte
+            y un museo marítimo. El edificio del Capitolio Nacional es un monumento icónico de la década
+            de 1920. En la Habana Vieja también se encuentra la catedral barroca de San Cristóbal y la
+            Plaza Vieja, cuyos edificios reflejan la dinámica mezcla arquitectónica de la ciudad.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <a href="#" class="boton-detalles btn btn-primary">Más Detalles</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="image/varadero.jpg" class="card-img-top" alt="Varadero">
+        <div class="card-body">
+          <h5 class="card-title">Varadero Beach</h5>
+          <p class="card-text">Varadero, que abarca la estrecha península de Hicacos en Cuba, es una
+            ciudad balneario popular. A lo largo de la costa de 20 km en el Atlántico, hay una hilera
+            de hoteles y complejos de spa con todo incluido y un campo de golf. Cerca del extremo este
+            de la península está la Reserva Ecológica Varahicacos, una reserva con senderos y una antigua
+            cueva fúnebre. El Parque Josone cuenta con un estanque y jardines.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 4 mins ago</small></p>
+          <a href="#" class="boton-detalles btn btn-primary">Más Detalles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nuevos cards group pero con footer & espaciado entre cada card https://getbootstrap.com/docs/5.3/components/card/#grid-cards -->
+  <br>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://onlinetours.es/blog/online/content/1780/responsive/02-1140.jpg" class="card-img-top"
+            alt="Playa Girón">
+          <div class="card-body">
+            <h5 class="card-title">Playa Girón</h5>
+            <p class="card-text">Playa Girón es una pequeña playa en la margen oriental de la Bahía de Cochinos, al
+              centro sur
+              de Cuba, que hoy es un centro turístico. Situada en uno de los mayores humedales del mundo, la Ciénaga de
+              Zapata</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">💰 aporximado: 250$</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://onlinetours.es/blog/online/content/1780/responsive/02-1140.jpg" class="card-img-top"
+            alt="Playa Larga">
+          <div class="card-body">
+            <h5 class="card-title">Playa Larga</h5>
+            <p class="card-text">En Matanzas aproximadamente a 13 km de la Bahía de Cochinos, se encuentra Playa Larga,
+              un extenso
+              arenal de 4 km de longitud, famosa entre otras cosas por ser el escenario de una escaramuza en la que un
+              grupo
+              estadounidenses, el 17 de abril de 1961, pretendían hacerse con el control de la playa y fueron
+              ahuyentados por el
+              pueblo cubano.
+
+              Playa Larga es la típica estampa del Caribe cubano: aguas tranquilas y limpias, arena blanca, palmeras y
+              el
+              exótico manto vegetal que cubre las zonas circundantes.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">💰 aporximado: 250$</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://onlinetours.es/blog/wp-content/uploads/sites/3/2019/12/508-01-1140-1140x642.jpg"
+            class="card-img-top" alt="Ciudad de Trinidad">
+          <div class="card-body">
+            <h5 class="card-title">Trinidad</h5>
+            <p class="card-text">Trinidad es una ciudad del centro de Cuba, conocida por su ciudad antigua colonial y
+              las calles
+              con adoquines. La plaza principal neobarroca, Plaza Mayor, está rodeada de grandes edificios coloniales.
+              El Museo
+              Romántico, en la mansión restaurada del Palacio Brunet, y el Museo de Arquitectura Colonial exhiben
+              reliquias de la
+              era de la producción de azúcar en la ciudad. La Iglesia de la Santísima es una catedral del siglo XIX con
+              un cielo
+              abovedado y altares tallados.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">💰 aporximado: 400$</small>
+            <br>
+            <a href="#" class="boton-detalles btn btn-primary">Más Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://onlinetours.es/blog/online/content/1780/responsive/02-1140.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cienfuegos</h5>
+            <p class="card-text">Cienfuegos es una ciudad de la bahía de Cienfuegos, en la costa sur de Cuba. Es
+              conocida por
+              sus edificios de la época colonial. En la plaza central Parque José Martí, se encuentra el Teatro Tomás
+              Terry,
+              con mosaicos de pan de oro y frescos en su cielo. El Museo Provincial explora la historia colonial de la
+              ciudad.
+              El Arco de Triunfo conmemora la independencia cubana. Los transbordadores cruzan la bahía hacia el
+              Castillo de
+              Jagua, una fortaleza del siglo XVIII.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">💰 aporximado: 350$</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://x.cdrst.com/foto/hotel-sf/11e69/granderesp/sol-cayo-coco-servicios-c6ad55a.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cayo Coco</h5>
+            <p class="card-text">Cayo Coco es una isla tropical de la cadena Jardines del Rey, de la región central de
+              Cuba.
+              Es conocida por sus playas de arena blanca y los arrecifes de coral; y su costa norte tiene balnearios con
+              todo
+              incluido. Los atractivos naturales incluyen lagunas y pantanos que albergan aves como el ibis blanco y una
+              colonia
+              nativa de flamencos rosa clasificada como una de las más grandes de América.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">💰 aporximado: 500$</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}
