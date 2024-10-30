@@ -3,7 +3,7 @@
 {% block title %} TawaTaxi Cuba ~ Agencia de Taxis{% endblock %}
 
 {% block content %}
-<!-- Seccion Hero -->
+<!-- Sección Hero -->
 <div class="hero jumbotron container my-5">
   <div class="p-2 text-center bg-body-tertiary rounded-3">
     <img src="../static/imgs/logo.png" width="440" height="250" alt="Logo TTC">
@@ -12,7 +12,7 @@
       Con nosotros podrás hacer tus viajes de ensueño, elige con libertad tu destino.
     </p>
     <div class="d-inline-flex gap-2 mb-5">
-      <a href="{% url 'about' %}">
+      <a href="{% url 'circuitos' %}">
         <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
         Circuitos
         </button>
@@ -26,10 +26,7 @@
   </div>
 </div>
 
-  <!-- Cards Groups from https://getbootstrap.com/docs/5.3/components/card/#card-groups -->
-  {% include "circuitos/older_cardgroup.html" %}
+<!-- Cards Groups from https://getbootstrap.com/docs/5.3/components/card/#card-groups -->
+{% include "circuitos/older_cardgroup.html" %}
 
-  <!-- Nuevos cards group pero con footer & espaciado entre cada card https://getbootstrap.com/docs/5.3/components/card/#grid-cards -->
-  {% include "circuitos/new_cardsgroup.html" %}
-  
-  {% endblock %}
+{% endblock %}
