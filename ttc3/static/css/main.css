@@ -84,15 +84,14 @@ body,
       -13px -13px 10px #262626, -13px -13px 10px #29d972;
 }
 
-.boton-detalles:hover {
-  --box-shadow-color: goldenrod;
-  border-color: black;
-  box-shadow: var(--hover-shadows);
+/*  Seccion Carucel */
+.custom-carousel-img {
+  width: 400px;  /* Ancho personalizado */
+  max-height: 100px;  /* Limitar la altura máxima */
 }
 
-.boton-detalles:active {
-  box-shadow: var(--hover-shadows),
-    var(--accent) 0px 0px 30px 5px;
-  background-color: var(--accent);
-  transform: scale(0.95);
+.carousel-inner {
+  max-width: 300px;  /* Ancho máximo del contenedor */
+  margin: auto;  /* Centrar el contenedor */
 }
+
