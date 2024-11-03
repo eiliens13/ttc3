@@ -104,32 +104,33 @@ body,
 
 /* Footer*/
 footer {
-  padding-top: 0.2rem;       /* Reducir padding superior */
-  padding-bottom: 0.2rem;    /* Reducir padding inferior */
-  margin-top: 5;             /* Sin margen superior */
+  padding-top: 0.20rem;       /* Reducir padding superior */
+  padding-bottom: 0.20rem;    /* Reducir padding inferior */
+  margin-top: 0;             /* Sin margen superior */
   margin-bottom: 0;          /* Sin margen inferior */
+  border-top: 1px solid #ccc; /* Ajusta el color del borde */
 }
 
 footer p {
   margin: 0;                 /* Sin margen en el texto de copyright */
-  font-size: 0.75rem;        /* Tamaño de fuente más pequeño */
+  font-size: 1rem;        /* Tamaño de fuente más pequeño */
 }
 
 footer a {
-  font-size: 0.75rem;        /* Tamaño de fuente más pequeño en los enlaces */
+  font-size: 1rem;        /* Tamaño de fuente más pequeño en los enlaces */
 }
 
 footer .nav-item {
   margin: 0;                 /* Sin margen en cada elemento de navegación */
 }
 
-footer img {
-  display: block;
-  margin: 0 auto;            /* Centrar el logo */
-  padding: 0;                /* Sin padding */
-}
 footer .nav-link {
   padding: 0.2rem 0.5rem;    /* Reducir el padding horizontal y vertical de los enlaces */
 }
 
+.footer-content {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajusta la sombra a tu gusto */
+  background-color: var(--bs-body-bg-tertiary); /* Mantén el fondo */
+  border-radius: 0 0 8px 8px; /* Ajuste de los bordes */
+}
 
