@@ -86,12 +86,50 @@ body,
 
 /*  Seccion Carucel */
 .custom-carousel-img {
-  width: 400px;  /* Ancho personalizado */
-  max-height: 100px;  /* Limitar la altura máxima */
+  height: 400px;  /* Ajusta este valor según el alto que prefieras */
+  width: 100%;
+  object-fit: cover;  /* Ajusta la imagen para llenar el contenedor */
 }
 
-.carousel-inner {
-  max-width: 300px;  /* Ancho máximo del contenedor */
-  margin: auto;  /* Centrar el contenedor */
+.carousel-container {
+  max-width: 800px;  /* Ajusta el ancho según lo que necesites */
+  margin: auto;      /* Centra el contenedor */
 }
+
+/*About*/
+.content-wrapper {
+  min-height: calc(100vh - 200px); /* Ajusta el valor de 200px según la altura del header y footer */
+}
+
+
+/* Footer*/
+footer {
+  padding-top: 0.2rem;       /* Reducir padding superior */
+  padding-bottom: 0.2rem;    /* Reducir padding inferior */
+  margin-top: 5;             /* Sin margen superior */
+  margin-bottom: 0;          /* Sin margen inferior */
+}
+
+footer p {
+  margin: 0;                 /* Sin margen en el texto de copyright */
+  font-size: 0.75rem;        /* Tamaño de fuente más pequeño */
+}
+
+footer a {
+  font-size: 0.75rem;        /* Tamaño de fuente más pequeño en los enlaces */
+}
+
+footer .nav-item {
+  margin: 0;                 /* Sin margen en cada elemento de navegación */
+}
+
+footer img {
+  display: block;
+  margin: 0 auto;            /* Centrar el logo */
+  padding: 0;                /* Sin padding */
+}
+footer .nav-link {
+  padding: 0.2rem 0.5rem;    /* Reducir el padding horizontal y vertical de los enlaces */
+}
+
 
