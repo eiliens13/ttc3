@@ -4,10 +4,33 @@
 
 {% block content %}
 
-<form action="/contacto/" method="POST"> {% csrf_token %}
+<div class="hero jumbotron container my-5">
+    <div class="p-2 text-center bg-body-tertiary rounded-3">
+    <img src="../static/imgs/phone.webp" width="300" height="300" alt="Teléfono encima de un un taxi">
+    <h1 class="text-body-emphasis">De Pinar a Maisí!</h1>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+        Con nosotros podrás hacer tus viajes de ensueño, elige con libertad tu destino.
+    </p>
+    <div class="d-inline-flex gap-2 mb-5">
+        <a href="https://wa.link/c65yqg" target="_blank" rel="noopener noreferrer">
+            <button class="d-inline-flex align-items-center btn btn-whatsapp btn-lg px-4 rounded-pill" type="button">
+                WhatsApp
+            </button>
+        </a>
+        <a href="https://instagram.com/tawa.taxi.cuba" target="_blank" rel="noopener noreferrer">
+            <button class="btn btn-instagram btn-lg px-4 rounded-pill" type="button">
+                Instagram
+            </button>
+        </a>
+    </div>
+    
+    </div>
+</div>
+
+<!-- <form action="/contacto/" method="POST"> {% csrf_token %}
     <p>Asunto:<input type="text" name="asunto"></p>
     <p>Email:<input type="text" name="email"></p>
     <p>Mensaje:<textarea name="mensaje" rows="15" cols="30"></textarea></p>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar"> -->
 
 {% endblock %}

@@ -15,3 +15,27 @@
     color: #666;
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
+
+/* Estilo del botón de WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366; /* Verde de WhatsApp */
+    color: white;
+    border-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE5A;
+    border-color: #1EBE5A;
+}
+
+/* Estilo del botón de Instagram */
+.btn-instagram {
+    background-color: #E1306C; /* Rosa de Instagram */
+    color: white;
+    border-color: #E1306C;
+}
+
+.btn-instagram:hover {
+    background-color: #C1275A;
+    border-color: #C1275A;
+}
