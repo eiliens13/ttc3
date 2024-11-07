@@ -145,3 +145,8 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "tawa.tawi.cuba@gmail.com"
 EMAIL_HOST_PASSWORD = "TTC1317+"
+
+# Super usuario para entrar en http://127.0.0.1:8000/admin/login/?next=/admin/
+    # e1li3ns
+    # eiliens.tawa.tito@gmail.com
+    # unriO-1300+aJUPS-4591+
