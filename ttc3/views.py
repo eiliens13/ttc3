@@ -65,11 +65,5 @@ def circuitos (request):
     return render(request, 'circuitos/new_cardsgroup.html', {'circuitos': circuitos})
 
 
-def detalles_circuito(request, id):
-    # Obtener el circuito por ID o devolver un 404 si no existe
-    circuito = get_object_or_404(Circuito, id=id)
-    # Pasar el objeto 'circuito' a la plantilla
-    return render(request, 'circuitos/detalles_circuito.html', {'circuito': circuito})
-
 
 
