@@ -32,4 +32,5 @@ urlpatterns = [
     path("resultados_circuitos/", views.buscar),
     path("contacto/", views.contacto, name="contacto"),
     path("circuitos/", circuitos, name="circuitos"),
+    path('circuito/detalles/<int:id>/', views.detalles_circuito, name='detalles_circuito'),
 ]

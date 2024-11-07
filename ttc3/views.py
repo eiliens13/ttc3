@@ -2,7 +2,8 @@ from django.http import HttpResponse
 import datetime
 from django.template import Template, Context
 from django.template.loader import get_template 
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
+from gestionPedidos.models import Circuito
 
 
 class Persona(object):
@@ -35,7 +36,6 @@ def dame_fecha(request):
     </h1>
     </body>
     </html>""" %fecha_actual
-
     return HttpResponse(documento)
 
 def calcula_edad(request, edad, agno):
@@ -44,7 +44,6 @@ def calcula_edad(request, edad, agno):
     periodo = agno-2019
     edadFutura = edad + periodo
     documento = "<html><body><h2>En el año %s tendras %s años" %(agno, edadFutura)
-
     return HttpResponse(documento)
 
 #=======================================================
@@ -62,6 +61,15 @@ def about (request):
     return render(request, "about.html", {})
 
 def circuitos (request):
-    return render(request, "circuitos/new_cardsgroup.html", {})
+    circuitos = Circuito.objects.all()
+    return render(request, 'circuitos/new_cardsgroup.html', {'circuitos': circuitos})
+
+
+def detalles_circuito(request, id):
+    # Obtener el circuito por ID o devolver un 404 si no existe
+    circuito = get_object_or_404(Circuito, id=id)
+    # Pasar el objeto 'circuito' a la plantilla
+    return render(request, 'circuitos/detalles_circuito.html', {'circuito': circuito})
+
 
 

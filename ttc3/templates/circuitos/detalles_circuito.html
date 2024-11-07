@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %} Detalles del Circuito: {{ circuit.name }} {% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ circuito.lugar }}</h2>
+    <p><strong>Destinos Turísticos:</strong> {{ circuito.destinos_turisticos }}</p>
+    <p><strong>Descripción:</strong> {{ circuito.descripcion }}</p>
+    <p><strong>Precio:</strong> ${{ circuito.precio }}</p>
+
+    <!-- Botón para volver atrás -->
+    <a href="{% url 'circuitos' %}" class="btn btn-secondary">Volver a Circuitos</a>
+</div>
+{% endblock %}
