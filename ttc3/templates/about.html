@@ -3,24 +3,24 @@
 {% block title %} Sobre Nosotros ~ TawaTaxi {% endblock %}
 
 {% block content %}
+{% load static %}
 
-<div class="container">
-  <div class="card text-bg-primary mb-3 min-height" >
-    <div class="card-header">Sobre Nosotros</div>
-    <div class="card-body">
-      <p class="card-text">Somos una agencia de viajes cubana, nuestros conductores cuentan con más de 15 años de
-        experiencia,
-        tenemos como objetivo brindarles una inolvidable visita a Cuba
-        , con una gran infinidad de destinos turisticos;
-        nos destaca la puntualidad, comodidad , seguridad y buena musica (a mal tiempo buena música).</p>
-    </div>
+<div class="card text-bg-dark no-border">
+  <img src="{% static 'imgs/tawa_in_h1.jpg' %}" class="card-img d-block no-rounded" alt="Tawa en un H1">
+  <div class="card-img-overlay card-overlay-bg">
+    <h5 class="card-title text-white">Sobre Nosotros</h5>
+    <p class="card-text text-white">Somos una agencia de viajes cubana, nuestros conductores cuentan con más de 15 años de
+      experiencia, tenemos como objetivo brindarles una inolvidable visita a Cuba, con una gran infinidad de destinos turísticos;
+      nos destaca la puntualidad, comodidad, seguridad y buena música (a mal tiempo buena música).</p>
   </div>
 </div>
+
+
 
 <div class="p-3 mb-2 bg-transparent text-body bg-gradient">
   <figure class="text-end">
     <blockquote class="blockquote">
-      <p>Esta agencia está limitada: no puede volar, ni nadar 😆;
+      <p>Esta agencia está limitada: no puede volar, ni nadar;
         podemos llevarte desde el cabo de San Antonio, hasta la punta de Maisí.
       </p>
     </blockquote>

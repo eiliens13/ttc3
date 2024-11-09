@@ -100,6 +100,36 @@ body,
 .content-wrapper {
   min-height: calc(100vh - 200px); /* Ajusta el valor de 200px según la altura del header y footer */
 }
+/* Eliminar bordes redondeados */
+.no-rounded {
+  border-radius: 0 !important;
+}
+
+/* Eliminar bordes adicionales */
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.card-img {
+  height: 400px;  /* Ajusta este valor según el alto que prefieras */
+  width: 100%;
+  object-fit: cover;  /* Ajusta la imagen para llenar el contenedor */
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+.custom-text-color {
+  color: #000000; 
+}
+.card-overlay-bg {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
+  padding: 15px;
+  border-radius: 5px;
+}
+.text-white {
+  color: #fff !important;
+}
 
 
 /* Footer*/
