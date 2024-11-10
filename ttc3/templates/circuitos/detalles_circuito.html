@@ -1,15 +1,23 @@
 {% extends "layout.html" %}
 
-{% block title %} Detalles del Circuito: {{ circuit.name }} {% endblock %}
+{% block title %}Detalles del Circuito{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
+<div class="container mt-5">
     <h2>{{ circuito.lugar }}</h2>
-    <p><strong>Destinos Turísticos:</strong> {{ circuito.destinos_turisticos }}</p>
-    <p><strong>Descripción:</strong> {{ circuito.descripcion }}</p>
+    <img src="{{ circuito.imagen_principal }}" alt="{{ circuito.lugar }}" class="img-fluid mb-4">
+    <p><strong>Destinos turísticos:</strong> {{ circuito.destinos_turisticos }}</p>
+    <p>{{ circuito.descripcion }}</p>
     <p><strong>Precio:</strong> ${{ circuito.precio }}</p>
-
-    <!-- Botón para volver atrás -->
-    <a href="{% url 'circuitos' %}" class="btn btn-secondary">Volver a Circuitos</a>
+    
+    {% if circuito.destinos_adicionales %}
+        <h4>Destinos Adicionales:</h4>
+        <ul>
+            {% for destino in circuito.destinos_adicionales.split(",") %}
+                <li>{{ destino }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 {% endblock %}
+

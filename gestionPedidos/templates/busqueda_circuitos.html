@@ -1,11 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %} Busqueda de Circuitos  ~ TawaTaxi Cuba {% endblock %}
+{% block title %} Busqueda de Circuitos ~ TawaTaxi Cuba {% endblock %}
 
 {% block content %}
 
-<form action="/buscar/" method="get">
-    <input type="text" name="cir">
-    <input type="submit" value="Buscar">
+<form action="/buscar/" method="get" class="mb-4">
+    <div class="form-group">
+        <!-- Agregar label para accesibilidad -->
+        <label for="busqueda-circuito">Buscar Circuito:</label>
+        <!-- Input mejorado con placeholder y title -->
+        <input 
+            type="text" 
+            id="busqueda-circuito" 
+            name="cir" 
+            class="form-control" 
+            placeholder="Ej. Playa Girón, Trinidad..." 
+            title="Introduce el nombre del circuito que deseas buscar" 
+            required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+</form>
 
 {% endblock %}

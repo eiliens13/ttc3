@@ -2,24 +2,27 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from gestionPedidos.models import Circuito
 
-
-# Create your views here.
 def busqueda_circuitos(request):
     return render(request, "busqueda_circuitos.html")
 
 
 def buscar(request):
-    if request.GET["cir"]:
-        # mensaje = "Circuito encontrado: %r" %request.GET["cir"]
+    if "cir" in request.GET:  # Asegúrate de que el parámetro esté en la solicitud
         circuito = request.GET["cir"]
-        if len(circuito)>20:
-            mensaje = "Texto de busqueda demasaido largo"
+        if len(circuito) > 20:
+            mensaje = "Texto de búsqueda demasiado largo"
+            return HttpResponse(mensaje)
         else:
             circuitos = Circuito.objects.filter(lugar__icontains=circuito)
-            return render(request, "resultados_circuitos.html", {"circuitos":circuitos, "query":circuito})
+            if circuitos.exists():
+                return render(request, "resultados_circuitos.html", {"circuitos": circuitos, "query": circuito})
+            else:
+                mensaje = "No se encontraron circuitos para tu búsqueda."
+                return HttpResponse(mensaje)
     else:
-        mensaje = "Debes introducir un destino para mostrarte nuestras ofertas 😉 "
-    return HttpResponse(mensaje)
+        mensaje = "Debes introducir un destino para mostrarte nuestras ofertas 😉"
+        return HttpResponse(mensaje)
+
 
 
 def contacto(request):
